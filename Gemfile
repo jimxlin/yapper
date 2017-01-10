@@ -53,3 +53,5 @@ gem 'faker', '~> 1.6.6'
 
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap4'
+
+gem 'simple_form'

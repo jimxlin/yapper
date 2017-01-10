@@ -24,5 +24,6 @@ PlacesControllerTest	test/controllers/places_controller_test.rb	/^class PlacesCo
 PlacesHelper	app/helpers/places_helper.rb	/^module PlacesHelper$/;"	m
 change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:CreatePlaces
 index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesController
+new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
 system!	bin/setup	/^def system!(*args)$/;"	f
 system!	bin/update	/^def system!(*args)$/;"	f
