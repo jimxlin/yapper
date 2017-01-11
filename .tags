@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddUserIdToPlaces	db/migrate/20170111021719_add_user_id_to_places.rb	/^class AddUserIdToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Nomster
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -27,6 +28,7 @@ User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
 UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
 change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:CreatePlaces
 change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
+change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces
 create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesController
 index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesController
 new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
