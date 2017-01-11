@@ -30,6 +30,7 @@ change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:Cre
 change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces
 create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesController
+destroy	app/controllers/places_controller.rb	/^  def destroy$/;"	f	class:PlacesController
 edit	app/controllers/places_controller.rb	/^  def edit$/;"	f	class:PlacesController
 index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesController
 new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
