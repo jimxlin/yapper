@@ -33,5 +33,6 @@ create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesCon
 index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesController
 new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
 place_params	app/controllers/places_controller.rb	/^  def place_params$/;"	f	class:PlacesController
+show	app/controllers/places_controller.rb	/^  def show$/;"	f	class:PlacesController
 system!	bin/setup	/^def system!(*args)$/;"	f
 system!	bin/update	/^def system!(*args)$/;"	f
