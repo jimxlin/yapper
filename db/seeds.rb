@@ -1,7 +1,9 @@
-User.create(
-  email:    "foobar@foobar.com",
-  password: "foobar"
-)
+unless User.find_by(email: "foobar@foobar.com")
+  User.create(
+    email:    "foobar@foobar.com",
+    password: "foobar"
+  )
+end
 
 32.times do |n|
   name = Faker::Company.name + ' ' + Faker::Company.suffix
