@@ -92,3 +92,15 @@ blockquote p {
 hr.divider {
   border-top: 1px solid #8c8b8b;
 }
+
+label {
+  display: block;
+}
+
+.img-fluid {
+  //margin: 10px 10px 0 0;
+}
+
+.caption, .no-photos {
+  text-align: center;
+}
