@@ -18,6 +18,9 @@ ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < A
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
 Comment	app/models/comment.rb	/^class Comment < ApplicationRecord$/;"	c
 CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
+CommentsController	app/controllers/comments_controller.rb	/^class CommentsController < ApplicationController$/;"	c
+CommentsControllerTest	test/controllers/comments_controller_test.rb	/^class CommentsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+CommentsHelper	app/helpers/comments_helper.rb	/^module CommentsHelper$/;"	m
 Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
 CreateComments	db/migrate/20170112235343_create_comments.rb	/^class CreateComments < ActiveRecord::Migration[5.0]$/;"	c
 CreatePlaces	db/migrate/20170107011121_create_places.rb	/^class CreatePlaces < ActiveRecord::Migration[5.0]$/;"	c
@@ -35,6 +38,8 @@ change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	cla
 change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces
 change	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^  def change$/;"	f	class:AddLatAndLngToPlaces
 change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:CreateComments
+comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
+create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
 create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesController
 destroy	app/controllers/places_controller.rb	/^  def destroy$/;"	f	class:PlacesController
 edit	app/controllers/places_controller.rb	/^  def edit$/;"	f	class:PlacesController
