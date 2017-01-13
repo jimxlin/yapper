@@ -43,6 +43,7 @@ create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:Comment
 create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesController
 destroy	app/controllers/places_controller.rb	/^  def destroy$/;"	f	class:PlacesController
 edit	app/controllers/places_controller.rb	/^  def edit$/;"	f	class:PlacesController
+humanized_rating	app/models/comment.rb	/^  def humanized_rating$/;"	f	class:Comment
 index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesController
 new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
 place_params	app/controllers/places_controller.rb	/^  def place_params$/;"	f	class:PlacesController
