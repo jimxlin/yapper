@@ -16,7 +16,10 @@ ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::B
 ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Comment	app/models/comment.rb	/^class Comment < ApplicationRecord$/;"	c
+CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
 Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreateComments	db/migrate/20170112235343_create_comments.rb	/^class CreateComments < ActiveRecord::Migration[5.0]$/;"	c
 CreatePlaces	db/migrate/20170107011121_create_places.rb	/^class CreatePlaces < ActiveRecord::Migration[5.0]$/;"	c
 DeviseCreateUsers	db/migrate/20170111011309_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.0]$/;"	c
 Nomster	config/application.rb	/^module Nomster$/;"	m
@@ -31,6 +34,7 @@ change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:Cre
 change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces
 change	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^  def change$/;"	f	class:AddLatAndLngToPlaces
+change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:CreateComments
 create	app/controllers/places_controller.rb	/^  def create$/;"	f	class:PlacesController
 destroy	app/controllers/places_controller.rb	/^  def destroy$/;"	f	class:PlacesController
 edit	app/controllers/places_controller.rb	/^  def edit$/;"	f	class:PlacesController
