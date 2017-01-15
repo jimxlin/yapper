@@ -51,7 +51,7 @@ change	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^  def change$/;"
 change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:CreateComments
 change	db/migrate/20170113025720_create_photos.rb	/^  def change$/;"	f	class:CreatePhotos
 change	db/migrate/20170113040740_add_picture_to_photos.rb	/^  def change$/;"	f	class:AddPictureToPhotos
-comment_added	app/mailers/notification_mailer.rb	/^  def comment_added$/;"	f	class:NotificationMailer
+comment_added	app/mailers/notification_mailer.rb	/^  def comment_added(comment)$/;"	f	class:NotificationMailer
 comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
 create	app/controllers/photos_controller.rb	/^  def create$/;"	f	class:PhotosController
