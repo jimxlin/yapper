@@ -63,6 +63,7 @@ index	app/controllers/places_controller.rb	/^  def index$/;"	f	class:PlacesContr
 new	app/controllers/places_controller.rb	/^  def new$/;"	f	class:PlacesController
 photo_params	app/controllers/photos_controller.rb	/^  def photo_params$/;"	f	class:PhotosController
 place_params	app/controllers/places_controller.rb	/^  def place_params$/;"	f	class:PlacesController
+send_comment_email	app/models/comment.rb	/^  def send_comment_email$/;"	f	class:Comment
 show	app/controllers/places_controller.rb	/^  def show$/;"	f	class:PlacesController
 store_dir	app/uploaders/picture_uploader.rb	/^  def store_dir$/;"	f	class:PictureUploader
 system!	bin/setup	/^def system!(*args)$/;"	f
