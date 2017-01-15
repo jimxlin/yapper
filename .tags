@@ -28,6 +28,9 @@ CreatePhotos	db/migrate/20170113025720_create_photos.rb	/^class CreatePhotos < A
 CreatePlaces	db/migrate/20170107011121_create_places.rb	/^class CreatePlaces < ActiveRecord::Migration[5.0]$/;"	c
 DeviseCreateUsers	db/migrate/20170111011309_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.0]$/;"	c
 Nomster	config/application.rb	/^module Nomster$/;"	m
+NotificationMailer	app/mailers/notification_mailer.rb	/^class NotificationMailer < ApplicationMailer$/;"	c
+NotificationMailerPreview	test/mailers/previews/notification_mailer_preview.rb	/^class NotificationMailerPreview < ActionMailer::Preview$/;"	c
+NotificationMailerTest	test/mailers/notification_mailer_test.rb	/^class NotificationMailerTest < ActionMailer::TestCase$/;"	c
 Photo	app/models/photo.rb	/^class Photo < ApplicationRecord$/;"	c
 PhotoTest	test/models/photo_test.rb	/^class PhotoTest < ActiveSupport::TestCase$/;"	c
 PhotosController	app/controllers/photos_controller.rb	/^class PhotosController < ApplicationController$/;"	c
@@ -48,6 +51,7 @@ change	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^  def change$/;"
 change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:CreateComments
 change	db/migrate/20170113025720_create_photos.rb	/^  def change$/;"	f	class:CreatePhotos
 change	db/migrate/20170113040740_add_picture_to_photos.rb	/^  def change$/;"	f	class:AddPictureToPhotos
+comment_added	app/mailers/notification_mailer.rb	/^  def comment_added$/;"	f	class:NotificationMailer
 comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
 create	app/controllers/photos_controller.rb	/^  def create$/;"	f	class:PhotosController
