@@ -2,11 +2,11 @@
 # *Important* Image seeding will add folders to root/public/uploads/photo/picture
 #   everytime it is run, you must manually delete them for every re-seed
 
-# # Clear DB entries
-# Place.delete_all
-# User.delete_all
-# Comment.delete_all
-# Photo.delete_all
+# Clear DB entries
+Place.delete_all
+User.delete_all
+Comment.delete_all
+Photo.delete_all
 
 ############################ Users #####################################
 
