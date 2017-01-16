@@ -1,6 +1,7 @@
-
-# *Important* Image seeding will add folders to root/public/uploads/photo/picture
-#   everytime it is run, you must manually delete them for every re-seed
+# *Important* seeding will add images
+#   to root/public/uploads/photo/picture (for local storage)
+#   or to whatever cloud storage you are using.
+#   It is recommended to delete these images before a re-seed.
 
 # Clear DB entries
 Place.delete_all
