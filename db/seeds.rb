@@ -11,16 +11,9 @@ Photo.delete_all
 
 ############################ Users #####################################
 
-unless User.find_by(email: "foobar@foobar.com")
+8.times do |n|
   User.create!(
-    email:    "foobar@foobar.com",
-    password: "foobar"
-  )
-end
-
-unless User.find_by(email: "foobaz@foobaz.com")
-  User.create!(
-    email:    "foobaz@foobaz.com",
+    email:    "foobar-#{n}@foobar.com",
     password: "foobar"
   )
 end
