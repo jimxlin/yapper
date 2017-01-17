@@ -44,6 +44,9 @@ PlacesControllerTest	test/controllers/places_controller_test.rb	/^class PlacesCo
 PlacesHelper	app/helpers/places_helper.rb	/^module PlacesHelper$/;"	m
 User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
 UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersControllerTest	test/controllers/users_controller_test.rb	/^class UsersControllerTest < ActionDispatch::IntegrationTest$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
 change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:CreatePlaces
 change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces
@@ -65,6 +68,7 @@ photo_params	app/controllers/photos_controller.rb	/^  def photo_params$/;"	f	cla
 place_params	app/controllers/places_controller.rb	/^  def place_params$/;"	f	class:PlacesController
 send_comment_email	app/models/comment.rb	/^  def send_comment_email$/;"	f	class:Comment
 show	app/controllers/places_controller.rb	/^  def show$/;"	f	class:PlacesController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
 store_dir	app/uploaders/picture_uploader.rb	/^  def store_dir$/;"	f	class:PictureUploader
 system!	bin/setup	/^def system!(*args)$/;"	f
 system!	bin/update	/^def system!(*args)$/;"	f

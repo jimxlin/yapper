@@ -23,8 +23,11 @@
             <% end %>
           </li>
         </ul>
-        <ul class="nav navbar-nav float-xs-right">
+        <ul class="nav navbar-nav float-lg-right">
           <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'My Profile', user_path(current_user), class: 'nav-link' %>
+            </li>
             <li class="nav-item">
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
