@@ -5,8 +5,8 @@ A [working version](https://firehose-nomster-jim-lin.herokuapp.com/) is hosted o
 
 ### Screenshots
 
-[homepage](screenshot1.png)  
-[a place page](screenshot2.png)
+![homepage](screenshots/screenshot1.png "homepage")  
+![a place page](screenshots/screenshot2.png "place page")
 
 ### User Authentication and Permissions
 
