@@ -1,7 +1,7 @@
 # Nomster
 
 A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.
-A [working version](https://firehose-nomster-jim-lin.herokuapp.com/) is hosted on Heroku. I am using free dynos, so please allow some time for the web page to load.
+A [working version](https://firehose-nomster-jim-lin.herokuapp.com/) is hosted on Heroku.
 
 ![a place page](screenshots/screenshot2.png "place page")
 
