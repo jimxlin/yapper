@@ -1,36 +1,41 @@
 <div class="booyah-box col-xs-10 offset-xs-1">
-  <h1><%= @place.name %></h1>
-  <i><%= @place.address %></i>
-  <br /><br />
+  <h1 class="title" data-place-name='<%= @place.name %>'><%= @place.name %></h1>
   <p><%= @place.description %></p>
 
-  <% if @place.latitude.present? && @place.longitude.present? %>
+  <div class="info-container col-12 col-md-6">
+    <% if @place.latitude.present? && @place.longitude.present? %>
+      <script>
+        var placeName = $('.title').data('place-name');
+        function initMap() {
+          var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
-    <script>
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: myLatLng
+          });
 
-      function initMap() {
-        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: placeName
+          });
+        }
+      </script>
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: myLatLng
-        });
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFTITdhGCoLfNcAyT8AmdTfRNP_7bD0hE&callback=initMap">
+      </script>
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
-
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFTITdhGCoLfNcAyT8AmdTfRNP_7bD0hE&callback=initMap">
-    </script>
-
-    <div id="map"></div>
-    <br />
-  <% end %>
+      <div id="map"></div>
+    <% else %>
+      <p class="map-error">Error locating address.</p>
+    <% end %>
+    <% address_ary = @place.address.split(', ') %>
+    <b><%= address_ary[0] %></b><br />
+    <b><%= address_ary[1] + ', ' + address_ary[2] %></b>
+    <p>(XXX)-XXX-XXX</p>
+    <p>www.xxxxxxx.com</p>
+  </div>
+  <br />
 
   <div class="float-xs-right">
     <% if current_user && current_user == @place.user %>
