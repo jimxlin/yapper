@@ -115,6 +115,16 @@ label {
   text-align: center;
 }
 
+.carousel {
+  overflow: hidden;
+  height: 400px;
+  box-shadow: none !important;
+}
+
+.carousel-control.left, .carousel-control.right{
+  background-image: none;
+}
+
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
   max-height: 550px;
 }
@@ -135,6 +145,7 @@ label {
   width: 100%;
   position: absolute;
   left: 0;
+  padding: 0 0 10px 0;
 }
 
 .carousel {
