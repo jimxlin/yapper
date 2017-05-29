@@ -32,7 +32,10 @@
 
     <% comment_count = @place.comments.length %>
     <% rating_avg = (@place.comments.reduce(0) {|sum, c| sum + c.rating.to_i}).to_f / comment_count %>
-    <p><b><%= rating_avg.round(1) %> stars</b> with <%= comment_count %> ratings</p>
+    <div class="ratings">
+      <%= rating_avg.round(1) %> stars with <%= comment_count %> ratings
+    </div>
+    <br />
 
     <% address_ary = @place.address.split(', ') %>
     <b><%= address_ary[0] %></b><br />
