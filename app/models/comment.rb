@@ -4,15 +4,15 @@ class Comment < ApplicationRecord
   after_create :send_comment_email
 
   RATINGS = {
-    'one star': '1_star',
-    'two stars': '2_stars',
-    'three stars': '3_stars',
-    'four stars': '4_stars',
-    'five stars': '5_stars'
+    'one star': 1,
+    'two stars': 2,
+    'three stars': 3,
+    'four stars': 4,
+    'five stars': 5
   }
 
   def humanized_rating
-    RATINGS.invert[self.rating]
+    RATINGS.invert[self.rating.to_i]
   end
 
   def send_comment_email
