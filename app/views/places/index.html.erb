@@ -1,6 +1,7 @@
-<br />
-<h1 id="index-title">Shops in San Francisco</h1>
-<br />
+<div class="title-container">
+  <h1 id="index-title">Places in San Francisco</h1>
+  <i id="index-subtitle"><%= Place.all.count %> places and <%= Comment.all.count %> ratings</i>
+</div>
 
 <div class="col-xs-12 paginate-col">
   <%= will_paginate @places %>

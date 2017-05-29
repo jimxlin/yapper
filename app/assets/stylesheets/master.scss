@@ -182,7 +182,15 @@ label {
   }
 }
 
-#index-title {
+.title-container {
+  margin-top: 15px;
   text-align: center;
+}
+
+#index-title {
   font-family: 'bellotabold', sans-serif;
+}
+
+#index-subtitle {
+  margin-left: auto;
 }
