@@ -1,36 +1,76 @@
 <div class="booyah-box col-xs-10 offset-xs-1">
-  <h1><%= @place.name %></h1>
-  <i><%= @place.address %></i>
-  <br /><br />
+  <h1 class="title" data-place-name='<%= @place.name %>'><%= @place.name %></h1>
   <p><%= @place.description %></p>
 
-  <% if @place.latitude.present? && @place.longitude.present? %>
+  <div class="info-container col-12 col-md-6">
+    <% if @place.latitude.present? && @place.longitude.present? %>
+      <script>
+        var placeName = $('.title').data('place-name');
+        function initMap() {
+          var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
-    <script>
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: myLatLng
+          });
 
-      function initMap() {
-        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: placeName
+          });
+        }
+      </script>
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: myLatLng
-        });
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFTITdhGCoLfNcAyT8AmdTfRNP_7bD0hE&callback=initMap">
+      </script>
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
+      <div id="map"></div>
+    <% else %>
+      <p class="map-error">Error locating address.</p>
+    <% end %>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFTITdhGCoLfNcAyT8AmdTfRNP_7bD0hE&callback=initMap">
-    </script>
-
-    <div id="map"></div>
+    <% comment_count = @place.comments.length %>
+    <% rating_avg = (@place.comments.reduce(0) {|sum, c| sum + c.rating.to_i}).to_f / comment_count %>
+    <div class="ratings">
+      <%= rating_avg.round(1) %> stars with <%= comment_count %> ratings
+    </div>
     <br />
-  <% end %>
+
+    <% address_ary = @place.address.split(', ') %>
+    <b><%= address_ary[0] %></b><br />
+    <b><%= address_ary[1] + ', ' + address_ary[2] %></b>
+    <p>(XXX)-XXX-XXX</p>
+    <p>www.xxxxxxx.com</p>
+  </div>
+
+  <div class="photos-container col-12 col-md-6">
+    <% if @place.photos.empty? %>
+      <p>No photos yet!</p>
+    <% else %>
+      <div id="photosCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <% @place.photos.each_with_index do |photo,i| %>
+            <div class="carousel-item <%= i == 0 ? 'active' : '' %>">
+              <%= image_tag photo.picture, class: 'img-fluid' %>
+              <div class="carousel-caption">
+                <%= photo.caption %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <a class="left carousel-control" href="#photosCarousel" role="button" data-slide="prev">
+          <span class="icon-prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#photosCarousel" role="button" data-slide="next">
+          <span class="icon-next" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    <% end %>
+  </div>
+  <br />
 
   <div class="float-xs-right">
     <% if current_user && current_user == @place.user %>
@@ -42,9 +82,6 @@
       <!-- Button trigger modal -->
     <% end %>
   </div>
-
-  <div class="clear"></div>
-  <hr class="divider">
 
   <!-- Modal -->
   <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -69,17 +106,6 @@
       </div>
     </div>
   </div>
-
-  <% if @place.photos.empty? %>
-    <h2 class="no-photos">There are no photos yet!</h2>
-  <% end %>
-
-  <% @place.photos.each do |photo| %>
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag photo.picture, class: "img-fluid rounded" %>
-      <p class="caption"><%= photo.caption %></p>
-    </div>
-  <% end %>
 
   <div class="clear"></div>
   <hr class="divider">

@@ -70,22 +70,10 @@ Comment.set_callback(:create, :after, :send_comment_email)
 
 ############################## Photos ##################################
 
-IMG_PATHS = {
-  img1: "db/seed_data/salad01.jpg",
-  img2: "db/seed_data/salad02.jpg",
-  img3: "db/seed_data/salad03.jpg",
-  img4: "db/seed_data/salad04.jpg",
-  img5: "db/seed_data/salad05.jpg",
-  img6: "db/seed_data/salad06.jpg",
-  img7: "db/seed_data/salad07.jpg",
-  img8: "db/seed_data/salad08.jpg",
-  img9: "db/seed_data/salad09.jpg",
-  img10: "db/seed_data/salad10.jpg",
-  img11: "db/seed_data/salad11.jpg"
-}
+IMG_PATHS = 18.times.map {|n| "db/seed_data/seedphoto#{n+1}.jpeg"}
 
 64.times do
-  img_path = IMG_PATHS[IMG_PATHS.keys.sample]
+  img_path = IMG_PATHS.sample
   caption = Faker::Hipster.sentence(2, false, 1)
   place_id = place_ids.sample
 

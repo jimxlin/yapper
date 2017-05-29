@@ -16,6 +16,7 @@ ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/
 ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
 ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+ChangeRatingsType	db/migrate/20170528235207_change_ratings_type.rb	/^class ChangeRatingsType < ActiveRecord::Migration[5.0]$/;"	c
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
 Comment	app/models/comment.rb	/^class Comment < ApplicationRecord$/;"	c
 CommentTest	test/models/comment_test.rb	/^class CommentTest < ActiveSupport::TestCase$/;"	c
@@ -54,6 +55,7 @@ change	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^  def change$/;"
 change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:CreateComments
 change	db/migrate/20170113025720_create_photos.rb	/^  def change$/;"	f	class:CreatePhotos
 change	db/migrate/20170113040740_add_picture_to_photos.rb	/^  def change$/;"	f	class:AddPictureToPhotos
+change	db/migrate/20170528235207_change_ratings_type.rb	/^  def change$/;"	f	class:ChangeRatingsType
 comment_added	app/mailers/notification_mailer.rb	/^  def comment_added(comment)$/;"	f	class:NotificationMailer
 comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
