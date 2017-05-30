@@ -34,15 +34,18 @@ User.find_each { |user| user_ids << user.id }
   IO.foreach("db/seed_data/addresses.csv") do |line|
     line_num += 1
     next unless line_num == address_line
-    address = line.split(',').join(', ')
+    address = line.split(',').join(', ').strip
     break
   end
 
-  place_types = ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors']
+  place_types = ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors', 'other']
+  p address
   Place.create!(
     name:        name,
     address:     address,
     place_type: place_types.sample,
+    phone: '000-000-0000',
+    url: 'foobar.foobar.foobar',
     description: description,
     user_id:     user_ids.sample
   )

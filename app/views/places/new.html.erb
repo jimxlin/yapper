@@ -3,7 +3,9 @@
   <%= simple_form_for @place do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
-    <%= f.input :place_type, collection: ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors'] %>
+    <%= f.input :place_type, label: 'Type of Place', collection: ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors', 'other'] %>
+    <%= f.input :phone, as: :tel, label: 'Phone Number' %>
+    <%= f.input :url, as: :url, label: 'Website' %>
     <%= f.input :description %>
     <br />
     <%= f.submit 'Create', class: 'btn btn-primary' %>

@@ -7,8 +7,10 @@
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
 AddLatAndLngToPlaces	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^class AddLatAndLngToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddNameToUsers	db/migrate/20170530050708_add_name_to_users.rb	/^class AddNameToUsers < ActiveRecord::Migration[5.0]$/;"	c
+AddPhoneToPlaces	db/migrate/20170530194337_add_phone_to_places.rb	/^class AddPhoneToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddPictureToPhotos	db/migrate/20170113040740_add_picture_to_photos.rb	/^class AddPictureToPhotos < ActiveRecord::Migration[5.0]$/;"	c
 AddTypeToPlaces	db/migrate/20170530045906_add_type_to_places.rb	/^class AddTypeToPlaces < ActiveRecord::Migration[5.0]$/;"	c
+AddUrlToPlaces	db/migrate/20170530194423_add_url_to_places.rb	/^class AddUrlToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddUserIdToPlaces	db/migrate/20170111021719_add_user_id_to_places.rb	/^class AddUserIdToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Nomster
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
@@ -62,6 +64,8 @@ change	db/migrate/20170528235207_change_ratings_type.rb	/^  def change$/;"	f	cla
 change	db/migrate/20170530045906_add_type_to_places.rb	/^  def change$/;"	f	class:AddTypeToPlaces
 change	db/migrate/20170530050708_add_name_to_users.rb	/^  def change$/;"	f	class:AddNameToUsers
 change	db/migrate/20170530055643_fix_type_name_in_places.rb	/^  def change$/;"	f	class:FixTypeNameInPlaces
+change	db/migrate/20170530194337_add_phone_to_places.rb	/^  def change$/;"	f	class:AddPhoneToPlaces
+change	db/migrate/20170530194423_add_url_to_places.rb	/^  def change$/;"	f	class:AddUrlToPlaces
 comment_added	app/mailers/notification_mailer.rb	/^  def comment_added(comment)$/;"	f	class:NotificationMailer
 comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController
