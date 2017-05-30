@@ -1,6 +1,9 @@
 <div class="booyah-box col-xs-10 offset-xs-1">
   <h1 class="title" data-place-name='<%= @place.name %>'><%= @place.name %></h1>
-  <p><%= @place.description %></p>
+  <p>
+    <span class="place-type">&nbsp&nbsp<%= @place.place_type %>&nbsp&nbsp</span>
+    <%= @place.description %>
+  </p>
 
   <div class="info-container col-12 col-md-6">
     <% if @place.latitude.present? && @place.longitude.present? %>
@@ -149,7 +152,7 @@
           <b><%= comment.humanized_rating %></b> -
         <% end %>
           <%= comment.message %>
-        <br /><small>&#8212 <%= comment.user.name %></small>
+        <br /><small>&#8212 <%= link_to comment.user.name, user_path(comment.user) %></small>
       </blockquote>
     </div>
   <% end %>

@@ -13,7 +13,7 @@
 </div>
 
 <br /><br class="clear"/>
-<h1 class="text-xs-center">My Comments</h1>
+<h1 class="text-xs-center">Comments</h1>
 <br /><br />
 <% @user.comments.each do |comment| %>
   <div class="col-xs-12 col-sm-6">
@@ -29,32 +29,34 @@
 <% end %>
 <div class="clear"></div>
 
-<br /><br />
-<h2 class="text-xs-center">My Places</h2>
-<br /><br />
-<% @user.places.each do |place| %>
-  <div class="booyah-box col-xs-10 offset-xs-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
-    <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
+<% if current_user == @user %>
+  <br /><br />
+  <h2 class="text-xs-center">My Places</h2>
+  <br /><br />
+  <% @user.places.each do |place| %>
+    <div class="booyah-box col-xs-10 offset-xs-1">
+      <h1><%= link_to place.name, place_path(place) %></h1><br />
+      <i><%= place.address %></i><br /><br />
+      <p><%= place.description %></p><br />
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
+      <% if place.user.present? %>
+        <small><%= place.user.email %></small>
+      <% end %>
 
-    <div class="clear"></div>
+      <div class="clear"></div>
 
-    <% if place.comments.present? %>
-      <div class="col-xs-12">
-        <blockquote>
-          <% last_comment = place.comments.last %>
-          <% if last_comment.humanized_rating.present? %>
-            <b><%= last_comment.humanized_rating %></b> -
-          <% end %>
-          <%= last_comment.message %>
-          <br /><small>&#8212 <%= last_comment.user.email %></small>
-        </blockquote>
-      </div>
-    <% end %>
-  </div>
+      <% if place.comments.present? %>
+        <div class="col-xs-12">
+          <blockquote>
+            <% last_comment = place.comments.last %>
+            <% if last_comment.humanized_rating.present? %>
+              <b><%= last_comment.humanized_rating %></b> -
+            <% end %>
+            <%= last_comment.message %>
+            <br /><small>&#8212 <%= last_comment.user.email %></small>
+          </blockquote>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>
