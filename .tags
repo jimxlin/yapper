@@ -6,7 +6,9 @@
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
 AddLatAndLngToPlaces	db/migrate/20170112033251_add_lat_and_lng_to_places.rb	/^class AddLatAndLngToPlaces < ActiveRecord::Migration[5.0]$/;"	c
+AddNameToUsers	db/migrate/20170530050708_add_name_to_users.rb	/^class AddNameToUsers < ActiveRecord::Migration[5.0]$/;"	c
 AddPictureToPhotos	db/migrate/20170113040740_add_picture_to_photos.rb	/^class AddPictureToPhotos < ActiveRecord::Migration[5.0]$/;"	c
+AddTypeToPlaces	db/migrate/20170530045906_add_type_to_places.rb	/^class AddTypeToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddUserIdToPlaces	db/migrate/20170111021719_add_user_id_to_places.rb	/^class AddUserIdToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Nomster
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
@@ -28,6 +30,7 @@ CreateComments	db/migrate/20170112235343_create_comments.rb	/^class CreateCommen
 CreatePhotos	db/migrate/20170113025720_create_photos.rb	/^class CreatePhotos < ActiveRecord::Migration[5.0]$/;"	c
 CreatePlaces	db/migrate/20170107011121_create_places.rb	/^class CreatePlaces < ActiveRecord::Migration[5.0]$/;"	c
 DeviseCreateUsers	db/migrate/20170111011309_devise_create_users.rb	/^class DeviseCreateUsers < ActiveRecord::Migration[5.0]$/;"	c
+FixTypeNameInPlaces	db/migrate/20170530055643_fix_type_name_in_places.rb	/^class FixTypeNameInPlaces < ActiveRecord::Migration[5.0]$/;"	c
 Nomster	config/application.rb	/^module Nomster$/;"	m
 NotificationMailer	app/mailers/notification_mailer.rb	/^class NotificationMailer < ApplicationMailer$/;"	c
 NotificationMailerPreview	test/mailers/previews/notification_mailer_preview.rb	/^class NotificationMailerPreview < ActionMailer::Preview$/;"	c
@@ -56,6 +59,9 @@ change	db/migrate/20170112235343_create_comments.rb	/^  def change$/;"	f	class:C
 change	db/migrate/20170113025720_create_photos.rb	/^  def change$/;"	f	class:CreatePhotos
 change	db/migrate/20170113040740_add_picture_to_photos.rb	/^  def change$/;"	f	class:AddPictureToPhotos
 change	db/migrate/20170528235207_change_ratings_type.rb	/^  def change$/;"	f	class:ChangeRatingsType
+change	db/migrate/20170530045906_add_type_to_places.rb	/^  def change$/;"	f	class:AddTypeToPlaces
+change	db/migrate/20170530050708_add_name_to_users.rb	/^  def change$/;"	f	class:AddNameToUsers
+change	db/migrate/20170530055643_fix_type_name_in_places.rb	/^  def change$/;"	f	class:FixTypeNameInPlaces
 comment_added	app/mailers/notification_mailer.rb	/^  def comment_added(comment)$/;"	f	class:NotificationMailer
 comment_params	app/controllers/comments_controller.rb	/^  def comment_params$/;"	f	class:CommentsController
 create	app/controllers/comments_controller.rb	/^  def create$/;"	f	class:CommentsController

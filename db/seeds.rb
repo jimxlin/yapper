@@ -14,6 +14,7 @@ Photo.delete_all
 8.times do |n|
   User.create!(
     email:    "foobar-#{n}@foobar.com",
+    name: Faker::Name.name,
     password: "foobar"
   )
 end
@@ -24,7 +25,7 @@ User.find_each { |user| user_ids << user.id }
 ############################ Places ####################################
 
 32.times do
-  name = Faker::Company.name + ' ' +Faker::Commerce.department(1)
+  name = Faker::Company.name + ' ' + Faker::Commerce.department(1)
   description = Faker::Company.catch_phrase + '! We ' + Faker::Company.bs + '!'
   address = ""
 
@@ -37,9 +38,11 @@ User.find_each { |user| user_ids << user.id }
     break
   end
 
+  place_types = ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors']
   Place.create!(
     name:        name,
     address:     address,
+    place_type: place_types.sample,
     description: description,
     user_id:     user_ids.sample
   )
