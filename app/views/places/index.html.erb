@@ -18,11 +18,7 @@
     <% else %>
       <p><b><%= rating_avg.round(1) %> stars</b> with <%= comment_count %> ratings</p>
     <% end %>
-    <br />
-    <% if place.user.present? %>
-      <small><%= place.user.name %></small>
-    <% end %>
-
+    
     <div class="clear"></div>
 
     <% if place.comments.present? %>

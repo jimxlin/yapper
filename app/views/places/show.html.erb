@@ -47,8 +47,12 @@
     <% address_ary = @place.address.split(', ') %>
     <b><%= address_ary[0] %></b><br />
     <b><%= address_ary[1] + ', ' + address_ary[2] %></b>
-    <p><%= @place.phone %></p>
-    <p><%= @place.url %></p>
+    <% if @place.phone.present? %>
+      <p><%= @place.phone %></p>
+    <% end %>
+    <% if @place.url.present? %>
+        <p><%= @place.url %></p>
+    <% end %>
   </div>
 
   <div class="photos-container col-12 col-md-6">
