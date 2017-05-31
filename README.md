@@ -1,9 +1,9 @@
-# Nomster
+# Yapper
 
-A Yelp clone that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.
-Demo available [here](https://nomster-miljinx.herokuapp.com/).
+Yapper is a Yelp-like web app that integrates with the Google Maps API and includes features like user comments, star ratings, image uploading, and user authentication.
+Demo available [here](https://yapper-miljinx.herokuapp.com/).
 
-![a place page](screenshots/screenshot2.png "place page")
+![a place page](screenshots/screenshot1.png "place page")
 
 ### User Authentication and Permissions
 
