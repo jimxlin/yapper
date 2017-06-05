@@ -12,7 +12,7 @@ AddPictureToPhotos	db/migrate/20170113040740_add_picture_to_photos.rb	/^class Ad
 AddTypeToPlaces	db/migrate/20170530045906_add_type_to_places.rb	/^class AddTypeToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddUrlToPlaces	db/migrate/20170530194423_add_url_to_places.rb	/^class AddUrlToPlaces < ActiveRecord::Migration[5.0]$/;"	c
 AddUserIdToPlaces	db/migrate/20170111021719_add_user_id_to_places.rb	/^class AddUserIdToPlaces < ActiveRecord::Migration[5.0]$/;"	c
-Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Yap
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Yapper
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
 ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
@@ -52,7 +52,7 @@ UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"
 UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
 UsersControllerTest	test/controllers/users_controller_test.rb	/^class UsersControllerTest < ActionDispatch::IntegrationTest$/;"	c
 UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
-Yap	config/application.rb	/^module Yap$/;"	m
+Yapper	config/application.rb	/^module Yapper$/;"	m
 change	db/migrate/20170107011121_create_places.rb	/^  def change$/;"	f	class:CreatePlaces
 change	db/migrate/20170111011309_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20170111021719_add_user_id_to_places.rb	/^  def change$/;"	f	class:AddUserIdToPlaces

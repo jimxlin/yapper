@@ -20,7 +20,3 @@ Geocoding (converting addresses to longitude and latitude) is done with the Bing
 ### Email Notifications
 
 Emails are sent to users when a place page they created gets a comment. This is done with Rails' Action Mailer and ActiveRecord callbacks. SendGrid is used as the production email server because it is integrated with Heroku.
-
-### Seeding Data
-
-The most involving part of creating sample data for the Heroku demo is getting legitimate addresses to work with the map feature. This app uses addresses from a [government website](https://data.sfgov.org/browse) for a populous city (San Francisco). Downloaded addresses were cleaned up, simplified, and stored in a CSV file for easy access.

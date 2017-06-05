@@ -27,19 +27,10 @@ User.find_each { |user| user_ids << user.id }
 32.times do
   name = Faker::Company.name + ' ' + Faker::Commerce.department(1)
   description = Faker::Company.catch_phrase + '! We ' + Faker::Company.bs + '!'
-  address = ""
-
-  address_line = rand(1..146148)
-  line_num = 0
-  IO.foreach("db/seed_data/addresses.csv") do |line|
-    line_num += 1
-    next unless line_num == address_line
-    address = line.split(',').join(', ').strip
-    break
-  end
+  ary = OpenDataAddresses.address.split(',')
+  address = ary[0] + ', ' + ary[1] + ', ' + ary[2] + ' ' + ary[3]
 
   place_types = ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors', 'other']
-  p address
   Place.create!(
     name:        name,
     address:     address,
