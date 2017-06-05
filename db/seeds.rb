@@ -27,8 +27,8 @@ User.find_each { |user| user_ids << user.id }
 32.times do
   name = Faker::Company.name + ' ' + Faker::Commerce.department(1)
   description = Faker::Company.catch_phrase + '! We ' + Faker::Company.bs + '!'
-  ary = OpenDataAddresses.address.split(',')
-  address = ary[0] + ', ' + ary[1] + ', ' + ary[2] + ' ' + ary[3]
+  hash = OpenDataAddresses.address.split(',')
+  address = hash[:street] + ', ' + hash[:city] + ', ' + hash[:state] + ' ' + hash[:zip]
 
   place_types = ['restaurant', 'shopping', 'beauty & spa', 'recreation', 'outdoors', 'other']
   Place.create!(
